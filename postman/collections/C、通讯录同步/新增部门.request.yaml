@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/departments?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"code\": \"CS0002\",  //部门编码\r
+
+    \    \"name\": \"其他企业2\",  //部门名称\r
+
+    \    \"parentId\": \"0\",  //上级部门ID，企业id同为根部门id     000a3-RUmE0000:平台测试\r
+
+    \    \"order\": 0\r
+
+    }"
+order: 1000

@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/staffs/disableOrEnableStaff/[Tdk3tgber501v0:88881005]?accessToken={{accessToken}}&active=true&doCheck=true"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+  active: "true"
+  doCheck: "true"
+order: 14000

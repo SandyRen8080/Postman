@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/outboundMessageLogs?accessToken={{accessToken}}&messageType=message&startDate=1611828534000&endDate=1643364534000"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  messageType: message
+  startDate: "1611828534000"
+  endDate: "1643364534000"
+order: 2000

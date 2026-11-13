@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/DATA_LINK/object/b41a0b811ce2ef06ac00/search?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "index":1,
+        "count":10,
+        "ids":["6BQbyAlofQsA00"],
+        "codes":[]
+    }
+order: 10000

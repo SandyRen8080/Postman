@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/organization/delegate/approve?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"staffId\": \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\",     //授权发起人ID\r
+
+    \    \"delegateeId\": \"Urf3lsFgBp00gw:Msy3lYjbQ103KM\", //被委托人ID\r
+
+    \    \"name\": \"修改委托授权\",                          //授权名称\r
+
+    \    \"remark\": \"备注\",                               //授权备注\r
+
+    \    \"startTime\": 1612339282021,                     //授权开始时间\r
+
+    \    \"endTime\": null,                                //授权结束时间\r
+
+    \    \"originalIds\": [                                //授权单据模板ID集合\r
+
+    \        // \"ID_3lTK171bpZw\"\r
+
+    \    ]\r
+
+    }"
+order: 3000

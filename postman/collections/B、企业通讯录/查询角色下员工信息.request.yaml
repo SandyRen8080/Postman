@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/roledefs/$ID_3nPlH7ZbTs0?accessToken={{accessToken}}&staffBy=id"
+method: GET
+queryParams:
+  - key: accessToken
+    value: "{{accessToken}}"
+  - key: staffBy
+    value: id
+    description: 查询员工信息显示类型，默认id
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 15000

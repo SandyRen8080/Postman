@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{URL}}/api/outbound/v1/approval?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "signKey":"5hPoHsymNqEf",
+        "flowId":"MK48h7s2yQ6Y00",
+        "nodeId":"FLOW:251847192:631543649",
+        "action":"accept",
+        "comment":"同意",
+        "rejectTo": ""
+    }
+order: 1000

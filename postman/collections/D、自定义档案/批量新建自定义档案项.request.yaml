@@ -1,0 +1,125 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/dimensions/items/batch?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"dimensionId\":\"U_gb_X4Yr8aY00:我是测试档案\",\r
+
+    \    \"itemListRequest\":[\r
+
+    \        {\r
+
+    \            \"name\":\"批量接口一级四11\",\r
+
+    \            \"code\":\"API2845\",\r
+
+    \            \"visibility\":{\r
+
+    \                \"fullVisible\":false,\r
+
+    \                \"staffs\":[\r
+
+    \                    \"ltAbQUtfE03k00:Ul0bKxHV6o3g00\",\r
+
+    \                    \"ltAbQUtfE03k00:NU8bdZALSsts00\"\r
+
+    \                ],\r
+
+    \                \"roles\":[\r
+
+    \                    \"ltAbQUtfE03k00:admin\",\r
+
+    \                    \"xfwc6jcQbwgw00\"\r
+
+    \                ],\r
+
+    \                \"departments\":[\r
+
+    \                    \"ltAbQUtfE03k00:zE8bTFJSqo1k00\",\r
+
+    \                    \"ltAbQUtfE03k00\"\r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"parentId\":\"\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\":\"批量接口二子1111\",\r
+
+    \            \"code\":\"API282112\",\r
+
+    \            \"visibility\":{\r
+
+    \                \"fullVisible\":true,\r
+
+    \                \"staffs\":[\r
+
+    \r
+
+    \                ],\r
+
+    \                \"roles\":[\r
+
+    \r
+
+    \                ],\r
+
+    \                \"departments\":[\r
+
+    \r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"parentId\":\"5Occ4lYCpM1400\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\":\"批量接口二子111\",\r
+
+    \            \"code\":\"API282111\",\r
+
+    \            \"visibility\":{\r
+
+    \                \"fullVisible\":true,\r
+
+    \                \"staffs\":[\r
+
+    \r
+
+    \                ],\r
+
+    \                \"roles\":[\r
+
+    \r
+
+    \                ],\r
+
+    \                \"departments\":[\r
+
+    \r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"parentId\":\"5Occ4lYCpM1400\"\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 4000

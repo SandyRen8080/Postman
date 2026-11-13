@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{UEL}}/api/openapi/v1/departments/update/$Urf3lsFgBp00gw:ID_3nPwG8m03U0?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"code\":\"XG001\",  //部门编码，修改前是BM001\r
+
+    \    \"name\": \"修改-财务部\",  //部门名称，修改前是财务部\r
+
+    \    \"parentId\": \"Urf3lsFgBp00gw:ID_3nPwG8m03U0\",  //上级部门ID，这里不修改\r
+
+    \    \"order\": 1  //排序字段，修改前是0\r
+
+    }"
+order: 3000

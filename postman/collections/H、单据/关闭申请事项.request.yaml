@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/requisition/closeRequisition/[ID_3BTtR548KcM,ID_3BTtR54K_cM]?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+order: 18000

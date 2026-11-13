@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/dimensions/items?accessToken={{accessToken}}&start=0&count=13&dimensionId=bwa3wajigF0WH0:项目&startDate=2022-01-12 14:35:54&endDate="
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  start: "0"
+  count: "13"
+  dimensionId: bwa3wajigF0WH0:项目
+  startDate: 2022-01-12 14:35:54
+  endDate: ""
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 5000

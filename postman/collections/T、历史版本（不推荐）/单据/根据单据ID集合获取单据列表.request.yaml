@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/docs/[ID_3z2UJrrA5nM]?accessToken={{accessToken}}&powerCode=219902&type=expense"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  powerCode: "219902"
+  type: expense
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 3000

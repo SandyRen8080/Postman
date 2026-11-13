@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/dimensions/items/withAll?accessToken={{accessToken}}&start=0&count=100&dimensionId=bwa3wajigF0WH0:法人实体"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  start: "0"
+  count: "100"
+  dimensionId: bwa3wajigF0WH0:法人实体
+order: 7000

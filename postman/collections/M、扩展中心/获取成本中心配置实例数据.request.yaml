@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/travel/costCenter/getInstanceData?accessToken=ID_3xpRfa80mmw:Urf3lsFgBp00gw&type=businessObject&start=1&count=20&keywords="
+method: GET
+queryParams:
+  accessToken: ID_3xpRfa80mmw:Urf3lsFgBp00gw
+  type: businessObject
+  start: "1"
+  count: "20"
+  keywords: ""
+order: 14000

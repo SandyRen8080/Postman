@@ -1,0 +1,95 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/datalink/add?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"entityId\":\"f30d55dddc88e443a800\",\r
+
+    \    \"importPart\":true,\r
+
+    \    \"dataLinks\":[\r
+
+    \        {\r
+
+    \            \"count\":1,\r
+
+    \             \"visible\":{\r
+
+    \                 \"fullVisible\":true,\r
+
+    \                 \"staffs\":[\"Urf3lsFgBp00gw:Fmd3oQU9lg00q0\",\"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"],  //为空表示全员可见\r
+
+    \                 \"roles\":[\"ID_3lj_gkid8$M\",\"ID_3lj_gkida$M\"],\r
+
+    \                 \"departments\":[\"Urf3lsFgBp00gw\"],\r
+
+    \                 \"departmentsIncludeChildren\":false\r
+
+    \            },\r
+
+    \    //         \"visibility\":{\r
+
+    \    //              \"fullVisible\":false,\r
+
+    \    //              \"staffs\":[\r
+
+    \    //                  \"Urf3lsFgBp00gw:Fmd3oQU9lg00q0\"\r
+
+    \    //              ],\r
+
+    \    //             \"roles\":[\r
+
+    \    //             ],\r
+
+    \    //              \"departments\":[\r
+
+    \    //             ],  \r
+
+    \    //             \"departmentsIncludeChildren\":true\r
+
+    \    // },\r
+
+    \            \"ownerId\":\"Urf3lsFgBp00gw:Fmd3oQU9lg00q0\",\r
+
+    \            \"disabled\":false,\r
+
+    \            \"data\":{\r
+
+    \                \"E_f30d55dddc88e443a800_code\": \"T-2021-09-10-0028\",\r
+
+    \                \"E_f30d55dddc88e443a800_name\": \"直接添加1\",\r
+
+    \               // \"E_f30d55dddc88e443a800_附件\": [],\r
+
+    \                \"E_f30d55dddc88e443a800_国家1\": \"ID_3lkgYgA0Mz0\",\r
+
+    \                \"E_f30d55dddc88e443a800_姓名1\": \"\",\r
+
+    \                \"E_f30d55dddc88e443a800_年龄2\": null,\r
+
+    \                \"E_f30d55dddc88e443a800_外部URL\": \"https://translate.google.cn/?sl=auto&tl=zh-CN&text=invoiceForm&op=translate\",\r
+
+    \                \"E_f30d55dddc88e443a800_人员多选\": \r
+
+    \                    \"Urf3lsFgBp00gw:Msy3lYjbQ103KM,Urf3lsFgBp00gw:mRI3oQU9lg02q0,Urf3lsFgBp00gw:Fmd3oQU9lg00q0\"\r
+
+    \                ,\r
+
+    \                \"E_f30d55dddc88e443a800_接口创建\": \"参数\",\r
+
+    \                \"E_f30d55dddc88e443a800_接口创建1\": \"\",\r
+
+    \                \"E_f30d55dddc88e443a800_金额\":\"1234\"\r
+
+    \            }\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 7000

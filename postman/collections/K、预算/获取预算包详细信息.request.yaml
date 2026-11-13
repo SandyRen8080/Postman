@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/budgets/$u6wbqiMW0Yqo00?accessToken={{accessToken}}"
+method: GET
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+order: 3000

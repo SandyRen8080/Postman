@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/staffs/getStaffIds?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  - key: accessToken
+    value: "{{accessToken}}"
+  - key: conditionIds
+    value: Urf3lsFgBp00gw:AvT3lntT8zzpWw
+    disabled: true
+body:
+  type: json
+  content: "{\r
+
+    \    \"type\": \"CODE\", //STAFFID : 员工ID | CODE : 工号 | CELLPHONE : 手机号 | MAIL : 邮箱 | USERID : 第三方ID\r
+
+    \    \"conditionIds\":[\r
+
+    \        \"7615\"\r
+
+    \    ]\r
+
+    }"
+order: 8000

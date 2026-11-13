@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/roledefs/$ID_3BKMdBcP07g?accessToken={{accessToken}}&name=ZGY职级预置角色1"
+method: PUT
+headers:
+  Content-Type: text/plain
+  content-type: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+  name: ZGY职级预置角色1
+order: 14000

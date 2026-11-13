@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/INVOICE/object/invoice/search?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"ids\":[null],\r
+
+    \    \"codes\":[],\r
+
+    \    \"index\":1,\r
+
+    \    \"count\":10\r
+
+    }"
+order: 2000

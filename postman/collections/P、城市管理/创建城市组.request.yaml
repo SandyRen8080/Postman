@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/cityGroup/create?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \      \"name\": \"openapi城市组\",\r
+
+    \      \"desc\": \"通过openapi创建的城市组\"\r
+
+    }"
+order: 2000

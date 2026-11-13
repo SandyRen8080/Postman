@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/docs/getApplyList?accessToken={{accessToken}}&type=expense&uid=bwa3wajigF0WH0:ID_3lokDfb1p5w&start=0&count=10&state=rejected,paying&orderBy=createTime&orderByType=desc&startDate&endDate&specificationId&active"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: expense
+  uid: bwa3wajigF0WH0:ID_3lokDfb1p5w
+  start: "0"
+  count: "10"
+  state: rejected,paying
+  orderBy: createTime
+  orderByType: desc
+  startDate: null
+  endDate: null
+  specificationId: null
+  active: null
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 2000

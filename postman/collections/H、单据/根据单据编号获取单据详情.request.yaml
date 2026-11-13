@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/flowDetails/byCode?accessToken={{accessToken}}&code=B21000001"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  code: B21000001
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 4000

@@ -1,0 +1,35 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/paymentResults?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"items\": [\r
+
+    \        {\r
+
+    \            \"id\": \"8ZAbsRr6_QfA00\",\r
+
+    \            \"code\": \"P00001\",\r
+
+    \            \"errorMsg\": null\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"id\": \"id2\",\r
+
+    \            \"code\": \"P00002\",\r
+
+    \            \"errorMsg\": null\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 14000

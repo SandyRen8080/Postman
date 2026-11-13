@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/departments/getDepartmentByPath?accessToken={{accessToken}}&path=测试OpenAPI/修改-财务部/事业2部"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  path: 测试OpenAPI/修改-财务部/事业2部
+order: 6000

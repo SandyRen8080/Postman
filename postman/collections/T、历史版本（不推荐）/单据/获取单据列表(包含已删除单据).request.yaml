@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/docSequences?accessToken={{accessToken}}&powerCode=219902&type=expense&index=1645613405500&count=1"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  powerCode: "219902"
+  type: expense
+  index: "1645613405500"
+  count: "1"
+order: 1000

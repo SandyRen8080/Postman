@@ -1,0 +1,36 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/flow/data/submitFlow?accessToken={{accessToken}}&flowId=ID_3tqvxwg246w"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+  flowId: ID_3tqvxwg246w
+body:
+  type: json
+  content: "{\r
+
+    \    \"isUrgent\": false,\r
+
+    \    \"urgentReason\": \"\",\r
+
+    \    \"nodes\": [\r
+
+    \        {\r
+
+    \            \"configNodeId\": \"@@:4FA8A037-89A5-4266-BFE4-211270616BB2\",//配置节点ID\r
+
+    \            \"approverId\": \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\" //审批人Id\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"configNodeId\": \"@@:5D0E95B4-1E3D-4D59-9DEF-1B8C54102AB0\", //配置节点ID\r
+
+    \            \"approverId\": \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\" //审批人Id\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 12000

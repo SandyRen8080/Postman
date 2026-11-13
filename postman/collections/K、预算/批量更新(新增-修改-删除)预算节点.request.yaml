@@ -1,0 +1,303 @@
+$kind: http-request
+name: 批量更新(新增/修改/删除)预算节点
+url: "{{URL}}/api/openapi/v2.1/budgets/$ID_3x7quvw41aw/batchUpdate?accessToken={{accessToken}}&type=id"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+body:
+  type: json
+  content: "\r
+
+    {\r
+
+    \    \"addNodes\":[\r
+
+    \        {\r
+
+    \            \"id\":\"1634112670003\",\r
+
+    \            \"code\":\"批量新增\",\r
+
+    \            \"content\":[\r
+
+    \                {\r
+
+    \                    \"dimensionType\":\"STAFF\",\r
+
+    \                    \"dimensionId\":\"submitterId\",\r
+
+    \                    \"mustLeaf\":true,\r
+
+    \                    \"contentId\":\"Urf3lsFgBp00gw:Fmd3oQU9lg00q0\"\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"moneys\":[\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"0\",\r
+
+    \                    \"nodeId\":\"1634112670003\",\r
+
+    \                    \"periodTime\":\"1\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"0\",\r
+
+    \                    \"nodeId\":\"1634112670003\",\r
+
+    \                    \"periodTime\":\"2\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"0\",\r
+
+    \                    \"nodeId\":\"1634112670003\",\r
+
+    \                    \"periodTime\":\"3\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"0\",\r
+
+    \                    \"nodeId\":\"1634112670003\",\r
+
+    \                    \"periodTime\":\"4\"\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"control\":\"ALLOW\",\r
+
+    \            \"freeze\": false,  //预算冻结，默认值false，不冻结\r
+
+    \            \"nodeId\":\"1634112670003\",\r
+
+    \            \"parentId\":\"1642995100247\"  //\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"id\":\"1634112670004\",\r
+
+    \            \"code\":\"批量新增-子\",\r
+
+    \            \"content\":[\r
+
+    \                {\r
+
+    \                    \"dimensionType\":\"STAFF\",\r
+
+    \                    \"dimensionId\":\"submitterId\",\r
+
+    \                    \"mustLeaf\":true,\r
+
+    \                    \"contentId\":\"Urf3lsFgBp00gw:ID_3ow_Xyy0MzM\"\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"moneys\":[\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"19\",\r
+
+    \                    \"nodeId\":\"1634112670004\",\r
+
+    \                    \"periodTime\":\"1\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"29\",\r
+
+    \                    \"nodeId\":\"1634112670004\",\r
+
+    \                    \"periodTime\":\"2\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"39\",\r
+
+    \                    \"nodeId\":\"1634112670004\",\r
+
+    \                    \"periodTime\":\"3\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"budgetMoney\":\"49\",\r
+
+    \                    \"nodeId\":\"1634112670004\",\r
+
+    \                    \"periodTime\":\"4\"\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"control\":\"ALLOW\",\r
+
+    \            \"freeze\": false,  //预算冻结，默认值false，不冻结\r
+
+    \            \"nodeId\":\"1634112670004\",\r
+
+    \            \"parentId\":\"1642995100247\"  //1634112670003111\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"updateNodes\":[\r
+
+    \        // {\r
+
+    \        //     \"id\":\"1634112670001\",\r
+
+    \        //     \"code\":\"批量更新\",\r
+
+    \        //     \"content\":[  //节点维度无法变更\r
+
+    \        //     ],\r
+
+    \        //     \"moneys\":[\r
+
+    \        //         {\r
+
+    \        //             \"budgetMoney\":\"119\",\r
+
+    \        //             \"nodeId\":\"1634112670001\",\r
+
+    \        //             \"periodTime\":\"1\"\r
+
+    \        //         },\r
+
+    \        //         {\r
+
+    \        //             \"budgetMoney\":\"229\",\r
+
+    \        //             \"nodeId\":\"1634112670001\",\r
+
+    \        //             \"periodTime\":\"2\"\r
+
+    \        //         },\r
+
+    \        //         {\r
+
+    \        //             \"budgetMoney\":\"339\",\r
+
+    \        //             \"nodeId\":\"1634112670001\",\r
+
+    \        //             \"periodTime\":\"3\"\r
+
+    \        //         },\r
+
+    \        //         {\r
+
+    \        //             \"budgetMoney\":\"449\",\r
+
+    \        //             \"nodeId\":\"1634112670001\",\r
+
+    \        //             \"periodTime\":\"4\"\r
+
+    \        //         }\r
+
+    \        //     ],\r
+
+    \        //     \"control\":\"ALLOW\",\r
+
+    \        //     \"freeze\": true,  //预算冻结，默认值false，不冻结\r
+
+    \        //     \"nodeId\":\"1634112670001\",\r
+
+    \        //     \"parentId\":\"1634112660000\"\r
+
+    \        // }\r
+
+    \    ],\r
+
+    \    \"deleteNodes\":[],\r
+
+    \    \"visibilities\":[\r
+
+    \        {\r
+
+    \            \"visibility\" :  {\r
+
+    \                \"id\":\"\",\r
+
+    \                \"corporationId\":\"Urf3lsFgBp00gw\",\r
+
+    \                \"budgetId\":\"ID_3o_V3Um0XZ0\",\r
+
+    \                \"budgetVersion\":\"1\",\r
+
+    \                \"nodeId\":\"1634112670003\",\r
+
+    \                \"staffIds\":[\r
+
+    \                    \"Urf3lsFgBp00gw:Jbz3lxSOC60290\"\r
+
+    \                ],\r
+
+    \                \"roleDefIds\":[]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"visibility\" :  {\r
+
+    \                \"id\":\"\",\r
+
+    \                \"corporationId\":\"Urf3lsFgBp00gw\",\r
+
+    \                \"budgetId\":\"ID_3o_V3Um0XZ01\",\r
+
+    \                \"budgetVersion\":\"1\",\r
+
+    \                \"nodeId\":\"1634112670004\",\r
+
+    \                \"staffIds\":[\r
+
+    \                    \"Urf3lsFgBp00gw:Jbz3lxSOC60290\"\r
+
+    \                ],\r
+
+    \                \"roleDefIds\":[]\r
+
+    \            }\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"active\":true,\r
+
+    \    \"publish\":true,\r
+
+    \    \"version\":7\r
+
+    }"
+order: 8000

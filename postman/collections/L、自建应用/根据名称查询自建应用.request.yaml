@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/datalink/getPlatformByName?accessToken={{accessToken}}"
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "name": "测试1125-11"
+    }
+order: 2000

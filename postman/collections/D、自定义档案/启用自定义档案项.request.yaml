@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/dimensions/items/$XBUbxhnP5k8w00/enable?accessToken={{accessToken}}&type=id"
+method: PUT
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+body:
+  type: text
+  content: |-
+    {
+        "applyToSubtree": true
+    }
+order: 13000

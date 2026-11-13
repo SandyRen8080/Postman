@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/departments/$XG001?accessToken={{accessToken}}&departmentBy=code"
+method: GET
+queryParams:
+  - key: accessToken
+    value: "{{accessToken}}"
+  - key: departmentBy
+    value: code
+    description: "固定值 : id 或者 code，与 idOrCode 参数对应"
+order: 3000

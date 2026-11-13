@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/cityGroup/search?accessToken={{accessToken}}&keyword="
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+  keyword: ""
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 1000

@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/datalink?accessToken={{accessToken}}&entityId=32240ae5c7fee240e000&start=0&count=100"
+method: GET
+queryParams:
+  - key: accessToken
+    value: "{{accessToken}}"
+  - key: entityId
+    value: 32240ae5c7fee240e000
+  - key: start
+    value: "0"
+  - key: count
+    value: "100"
+  - key: startDate
+    value: 2021-10-29 14:17
+    disabled: true
+  - key: endDate
+    value: 2021-10-29 14:32:26
+    disabled: true
+order: 9000

@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/provisional/getProvisionalAuth?accessToken={{accessToken}}"
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "uid": "34A73EyI8A0w00:Kh0bnmDTrU9g00",
+        //"userId": "",
+        "pageType": "home",
+        //"flowId": "",
+        "expireDate": "120",
+        "isApplet": true,
+        //"action": "",
+        "overdueTokenRedirect": "https://www.ekuaibao.com"
+    }
+order: 6000

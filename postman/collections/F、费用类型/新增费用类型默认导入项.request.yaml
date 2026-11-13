@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/feeTypeImportRule/defaultRule?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "sourceId": "dataLink_b41a0b811ce2ef06ac00",
+        "title": "岸边项目测试"
+    }
+order: 3000

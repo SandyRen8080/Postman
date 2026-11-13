@@ -1,0 +1,47 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/dimensions/items?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "dimensionId": "Urf3lsFgBp00gw:项目",  //档案类别ID
+        "name": "项目2-1",                     //档案值名称    
+        "code": "XM2001",                     //档案值编码   
+        "visibility": {
+            "fullVisible": true,              //是否全部可见
+            "staffs": [],
+            "roles": [],
+            "departments": []
+        },
+        "parentId": "Ak0btTcoEkrA00",         //档案值父级ID
+        //-----------------------------------------
+        //系统预置档案额外参数如下，不用时不传即可：        
+        "form":{
+            //“项目” 档案额外参数
+            "projectBase": "[{\"key\":\"8\",\"label\":\"北京市/海淀区\"}]",  //项目所在地
+            "projectInspector": "uIk3sePdIJ00v0:1102",                     //项目总监，值为员工ID
+            "projectManager": "uIk3sePdIJ00v0:AvT3lntT8zzpWw",             //项目经理，值为员工ID
+            "projectType": "ID_3sjnVFu0ZOw",                               //项目类型，值为【项目类型预置】档案实例ID
+            //-----------------------------------------
+            //“职级预置”档案额外参数
+            "rankType":"ID_3sjnv7SJeIw",                                   //职级类型，值为【职级类型预置】档案实例ID
+            //-----------------------------------------
+            //“岗位预置”档案额外参数
+             "postType":"ID_3sjQzq30UL0",                                  //岗位类型，值为【岗位类型预置】档案实例ID
+            //-----------------------------------------
+            //“法人实体”档案额外参数
+            "taxpayerType":"GeneralTaxpayer"                               //纳税人类型，GeneralTaxpayer：一般纳税人；SmallScaleTaxpayer：小规模纳税人
+            //-----------------------------------------
+        },
+        //“法人实体”档案额外参数
+        "payAccountIds":["uIk3sePdIJ00v0:BANK"],                            //可用支付账户
+        //“法人实体”，“成本中心预置”档案额外参数
+        "departments":["uIk3sePdIJ00v0"]                                    //所属部门
+    }
+order: 3000

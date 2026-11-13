@@ -1,0 +1,192 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/docSequences?accessToken={{accessToken}}&powerCode=219902&type=expense&index=1600000000000&count=1&state=PAID"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+  powerCode: "219902"
+  type: expense
+  index: "1600000000000"
+  count: "1"
+  state: PAID
+body:
+  type: json
+  content: "{\r
+
+    \    \"fields\": { //过滤字段，传\"\"或者null均可\r
+
+    \        \"docData\": { //单据数据\r
+
+    \            \"type\": \"\",\r
+
+    \            \"code\": \"\", //单据编号\r
+
+    \            \"title\": \"\", //单据标题\r
+
+    \            \"state\": \"\", //单据状态\r
+
+    \            \"remark\": \"\", //备注\r
+
+    \            \"ownerId\": \"\", //流程发起人ID(员工ID)\r
+
+    \            \"dataType\": \"\", //数据类型\r
+
+    \            \"project\": \"\", //项目信息\r
+
+    \            \"updateTime\": \"\", //更新时间\r
+
+    \            \"specificationId\": \"\", //单据模版ID\r
+
+    \            \"owner\": { //提交人信息\r
+
+    \                // \"id\":\"\", \r
+
+    \                \"name\": \"\",\r
+
+    \                \"departments\": [\r
+
+    \                    {\r
+
+    \                        \"id\": \"\",\r
+
+    \                        \"name\": \"\"\r
+
+    \                    }\r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"department\": { //部门信息\r
+
+    \                \"name\": \"\"\r
+
+    \            },\r
+
+    \            \"userProps\": \"\", //自定义字段集\r
+
+    \            \"details\": \"\", //单据明细信息\r
+
+    \            \"logs\": \"\", //审批日志\r
+
+    \            \"flowPlan\": { //审批流信息\r
+
+    \                // \"id\":\"\",  //不能置空，会报错\r
+
+    \                \"version\": \"\",\r
+
+    \                \"pipeline\": \"\",\r
+
+    \                \"resubmitMethod\": \"\",\r
+
+    \                \"prevId\": \"\",\r
+
+    \                \"sourceCorporationId\": \"\",\r
+
+    \                // \"nodes\":[ \r
+
+    \                //     {\r
+
+    \                //         \"id\":\"\",\r
+
+    \                //         \"name\":\"\",\r
+
+    \                //         \"skippedType\":\"\",\r
+
+    \                //         \"config\":\"\",\r
+
+    \                //         \"ebotConfig\":\"\"\r
+
+    \                //     }\r
+
+    \                // ]\r
+
+    \                \"nodes\": [\r
+
+    \                    {\r
+
+    \                        // \"type\":\"\",\r
+
+    \                        \"id\": \"\",\r
+
+    \                        \"configNodeId\": \"\",\r
+
+    \                        \"name\": \"\",\r
+
+    \                        \"label\": \"\",\r
+
+    \                        \"skippedType\": \"\",\r
+
+    \                        \"agreeType\": \"\",\r
+
+    \                        \"conditionalDescription\": \"\",\r
+
+    \                        \"conditionalType\": \"\",\r
+
+    \                        \"skipWhenApproverNonMatched\": \"\",\r
+
+    \                        \"autoAgreeWhenApproverRepeated\": \"\",\r
+
+    \                        \"autoAgreeWhenApproverSameAsSubmitter\": \"\",\r
+
+    \                        \"removeDefaultHistoryApprover\": \"\",\r
+
+    \                        \"autoAgreeWhenCreditInsepction\": \"\",\r
+
+    \                        \"creditNoteAvailable\": \"\",\r
+
+    \                        \"allowModify\": \"\",\r
+
+    \                        \"config\": \"\",\r
+
+    \                        \"isAllStaffs\": \"\",\r
+
+    \                        \"carbonCopy\": \"\",\r
+
+    \                        \"timeCount\": \"\",\r
+
+    \                        \"addCountReport\": \"\",\r
+
+    \                        \"isAddNode\": \"\",\r
+
+    \                        \"autoRemindPrint\": \"\",\r
+
+    \                        \"beforeRemindPrint\": \"\",\r
+
+    \                        \"allowModifyApprover\": \"\",\r
+
+    \                        \"expressConfig\": \"\",\r
+
+    \                        \"commentWhenFlowHasRisk\": \"\",\r
+
+    \                        \"forbidBatchApproveRiskFlow\": \"\",\r
+
+    \                        \"condition\": \"\",\r
+
+    \                        \"laterCalcReason\": \"\",\r
+
+    \                        \"forbidBeforeAddNode\": \"\",\r
+
+    \                        \"forbidAftAddNode\": \"\",\r
+
+    \                        \"forbidShiftNode\": \"\",\r
+
+    \                        \"crossCorpNode\": \"\",\r
+
+    \                        \"rejectSetting\": \"\",\r
+
+    \                        \"ebotConfig\": \"\",\r
+
+    \                        \"approveType\": \"\"\r
+
+    \                    }\r
+
+    \                ]\r
+
+    \            }\r
+
+    \        }\r
+
+    \    }\r
+
+    }\r\n"
+order: 2000

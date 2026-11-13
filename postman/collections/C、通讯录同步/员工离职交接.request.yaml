@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/flows/relay?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  - key: corpId
+    value: ID_3sO$Kmh0dLw:Urf3lsFgBp00gw
+    disabled: true
+  - key: accessToken
+    value: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"staffId\":\"Tdk3tgber501v0:ID_3tqBA3t0E6g\",  //操作人，冯继成（系统管理员）\r
+
+    \    \"originApproverId\": \"Tdk3tgber501v0:P1003\",  //离职人，批量新增-3\r
+
+    \    \"relayApproverId\": \"Tdk3tgber501v0:ID_3tqBA3t0E6g\",  //交接人，张三--修改\r
+
+    \    \"unboundInvoice\": true,  //将待离职员工草稿及被驳回的单据删除、关联的发票解除关联，TRUE表示交接,FALSE表示不交接  必填为true\r
+
+    \    \"shareWaitingInvoice\": true,  //将待开发票共享给新交接人，TRUE表示交接,FALSE表示不交接  必填为true\r
+
+    \    \"dataLinkFlag\": true  //如果是业务对象负责人或者管理员，交接到新交接人下面，TRUE表示交接,FALSE表示不交接  必填为true\r
+
+    }"
+order: 13000

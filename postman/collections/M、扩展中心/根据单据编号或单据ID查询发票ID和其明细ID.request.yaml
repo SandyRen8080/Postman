@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/flow/INVOICE/search?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"type\":\"code\",\r
+
+    \    \"codeOrIds\":[\"B22000025\"]\r
+
+    }"
+order: 1000

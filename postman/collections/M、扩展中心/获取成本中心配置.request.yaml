@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/travel/costCenter/getCostCenterConfig?accessToken=ID_3xpRfa80jmw:Tdk3tgber501v0"
+method: GET
+queryParams:
+  accessToken: ID_3xpRfa80jmw:Tdk3tgber501v0
+order: 13000

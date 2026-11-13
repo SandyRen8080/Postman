@@ -1,0 +1,472 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.1/budgets/create?accessToken={{accessToken}}&type=id"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+body:
+  type: json
+  content: "{\r
+
+    \      \"budgetInfo\": {\r
+
+    \            \"active\": true, // 是否发布\r
+
+    \            \"name\": \"测试预算-1202-1\", //预算树名称\r
+
+    \            \"corporationId\": \"Urf3lsFgBp00gw\",\r
+
+    \            \"isCustom\": false, // 是否自定义区间\r
+
+    \            \"isRollCalc\": false, // 是否滚动预算\r
+
+    \            \"period\": {\r
+
+    \                  \"annual\": \"2021\", //控制年度\r
+
+    \                  \"period\": \"SEASON\", // 年度内分割方式，SEASON: 按季度, MONTH: 按月份, HALF_YEAR: 半年, YEAR: 整年, null: 非周期控制。\r
+
+    \                  \"startTime\": null, // 非周期控制开始时间\r
+
+    \                  \"endTime\": null // 非周期控制结束时间\r
+
+    \            }\r
+
+    \      },\r
+
+    \       \"addNodes\": [ // 追加节点\r
+
+    \        {\r
+
+    \                  \"id\": \"1634112660000\",  //不重复的唯一id,例如:可用毫秒级时间戳作为节点ID\r
+
+    \                  \"code\": \"根节点\",\r
+
+    \                  \"content\": [  //根节点传空\r
+
+    \                        {\r
+
+    \                            \"dimensionType\": \"STAFF\",  //员工类型\r
+
+    \                            \"dimensionId\": \"submitterId\",   \r
+
+    \                            \"mustLeaf\": true,\r
+
+    \                            \"contentId\": \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                        },\r
+
+    \                         {\r
+
+    \                              \"dimensionType\": \"PROJECT\",  //扩展档案\r
+
+    \                              \"dimensionId\": \"E_system_rank\",  //系统字段示例：E_system_rank 职级预置  E_system_post 岗位预置\r
+
+    \                              \"mustLeaf\": true,\r
+
+    \                              \"contentId\": \"ID_3oOKW5BiYh0\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"moneys\": [\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null, //根节点传空，由系统自动累加子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112660000\",\r
+
+    \                              \"periodTime\": \"1\"  //第几个周期，因为是按季度划分，所有有4个周期，即4个季度的预算金额\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//根节点传空，由系统自动累加子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112660000\",\r
+
+    \                              \"periodTime\": \"2\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//根节点传空，由系统自动累加子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112660000\",\r
+
+    \                              \"periodTime\": \"3\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//根节点传空，由系统自动累加子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112660000\",\r
+
+    \                              \"periodTime\": \"4\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"control\": \"ALLOW\", // 当预算超额时,控制方式(ALLOW:允许提交单据 FORBID:禁止提交单据 IGNORED:什么都不做)\r
+
+    \                  \"nodeId\": \"1634112660000\", //与上面预算节点id保持一致\r
+
+    \                  \"parentId\": \"\" // 父节点id为空就是根节点\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"id\": \"1634112670000\",//不重复的唯一id,例如:可用毫秒级时间戳作为节点ID\r
+
+    \                  \"code\": \"维度-1\", \r
+
+    \                  \"content\": [\r
+
+    \                        {\r
+
+    \                              \"dimensionType\": \"PROJECT\",\r
+
+    \                              \"dimensionId\": \"项目\",\r
+
+    \                              \"mustLeaf\": true,\r
+
+    \                              \"contentId\": \"ID_3oOKW5BgYh0\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"moneys\": [\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null, //非最末级节点传空即可，由系统自动累加此维度下子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112670000\",\r
+
+    \                              \"periodTime\": \"1\"  //第几个周期，因为是按季度划分，所有有4个周期，即4个季度的预算金额\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//非最末级节点传空即可，由系统自动累加此维度下子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112670000\",\r
+
+    \                              \"periodTime\": \"2\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//非最末级节点传空即可，由系统自动累加此维度下子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112670000\",\r
+
+    \                              \"periodTime\": \"3\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": null,//非最末级节点传空即可，由系统自动累加此维度下子预算额度合计\r
+
+    \                              \"nodeId\": \"1634112670000\",\r
+
+    \                              \"periodTime\": \"4\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"control\": \"ALLOW\", // 当预算超额时,控制方式(ALLOW:允许提交单据 FORBID:禁止提交单据 IGNORED:什么都不做)\r
+
+    \                  \"nodeId\": \"1634112670000\",\r
+
+    \                  \"parentId\": \"1634112660000\" // 父节点id为空就是根节点\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"id\": \"1634112670001\",\r
+
+    \                  \"code\": \"维度-2\",\r
+
+    \                  \"content\": [\r
+
+    \                        {\r
+
+    \                              \"dimensionType\": \"PROJECT\",\r
+
+    \                              \"dimensionId\": \"项目\",\r
+
+    \                              \"mustLeaf\": true,\r
+
+    \                              \"contentId\": \"ID_3mwUvA4ib1M\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"moneys\": [\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"11.00\",  //维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670001\",\r
+
+    \                              \"periodTime\": \"1\"  //第几个周期，因为是按季度划分，所有有4个周期，即4个季度的预算金额\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"22.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670001\",\r
+
+    \                              \"periodTime\": \"2\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"33.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670001\",\r
+
+    \                              \"periodTime\": \"3\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"44.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670001\",\r
+
+    \                              \"periodTime\": \"4\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"control\": \"ALLOW\", // 当预算超额时,控制方式(ALLOW:允许提交单据 FORBID:禁止提交单据 IGNORED:什么都不做)\r
+
+    \                  \"nodeId\": \"1634112670001\",\r
+
+    \                  \"parentId\": \"1634112660000\" // 父节点id为空就是根节点\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"id\": \"1634112670002\",\r
+
+    \                  \"code\": \"维度-1-1\",\r
+
+    \                  \"content\": [\r
+
+    \                        {\r
+
+    \                              \"dimensionType\": \"DEPART\",\r
+
+    \                              \"dimensionId\": \"expenseDepartment\",\r
+
+    \                              \"mustLeaf\": true,\r
+
+    \                              \"contentId\": \"Urf3lsFgBp00gw\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"moneys\": [\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"10.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670002\",\r
+
+    \                              \"periodTime\": \"1\"  //第几个周期，因为是按季度划分，所有有4个周期，即4个季度的预算金额\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"20.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670002\",\r
+
+    \                              \"periodTime\": \"2\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"30.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670002\",\r
+
+    \                              \"periodTime\": \"3\"\r
+
+    \                        },\r
+
+    \                        {\r
+
+    \                              \"budgetMoney\": \"40.00\",//维度下没有子预算，需要传入预算金额\r
+
+    \                              \"nodeId\": \"1634112670002\",\r
+
+    \                              \"periodTime\": \"4\"\r
+
+    \                        }\r
+
+    \                  ],\r
+
+    \                  \"control\": \"ALLOW\", // 节点控制方式（ALLOW：允许提交单据，FORBID：禁止提交单据）\r
+
+    \                  \"nodeId\": \"1634112670002\",\r
+
+    \                  \"parentId\": \"1634112670000\" // 父节点id为空就是根节点\r
+
+    \            }\r
+
+    \      ],\r
+
+    \     \"visibilities\": [ // 节点负责人\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112660000\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670000\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670001\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670002\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            }\r
+
+    \      ],\r
+
+    \      \"editInChargers\": [// 预算编制负责人\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112660000\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670000\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670001\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            },\r
+
+    \            {\r
+
+    \                  \"nodeId\": \"1634112670002\",\r
+
+    \                  \"staffIds\": [\r
+
+    \                        \"Urf3lsFgBp00gw:AvT3lntT8zzpWw\"\r
+
+    \                  ],\r
+
+    \                  \"roleDefIds\": []\r
+
+    \            }\r
+
+    \      ],\r
+
+    \     \"version\":1\r
+
+    }"
+order: 1000

@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/staffs/$Tdk3tgber501v0:ID_3tqBA3t0E6g/customFields?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"rankType\":\"ID_3tqvxwgjL6w\",  //职级，值为职级档案项id，一级改为二级        \r
+
+    \    \"postType\":\"ID_3tqvxwgjG6w\",  //岗位，值为岗位档案项id，经理改为主管\r
+
+    \    \"base\":\"[{\\\"key\\\":\\\"4\\\",\\\"label\\\":\\\"北京市/西城区\\\"}]\",  //常驻地，修改为西城区\r
+
+    \    \"u_花名\":\"法外狂徒-张三\",  //花名，修改为 法外狂徒-张三\r
+
+    \    \"u_项目\":\"ID_3tqvxwgjB6w\"  //项目，米哈游项目 改为腾讯项目\r
+
+    }\r\n"
+order: 12000

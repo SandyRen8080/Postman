@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/INVOICE/url?accessToken=ID_3wEqejeQf10:f8s5YEsguEbA00"
+method: POST
+queryParams:
+  accessToken: ID_3wEqejeQf10:f8s5YEsguEbA00
+body:
+  type: json
+  content: "{\r
+
+    \    \"invoiceId\":[\"f8s5YEsguEbA00:1100211130:23115549\"]\r
+
+    }"
+order: 10000

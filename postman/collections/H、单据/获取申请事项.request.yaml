@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/requisition/getData?accessToken={{accessToken}}&start=0&count=100&staffId=bwa3wajigF0WH0:ID_3lokDfb1p5w1&state=ALL"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+  start: "0"
+  count: "100"
+  staffId: bwa3wajigF0WH0:ID_3lokDfb1p5w1
+  state: ALL
+scripts:
+  - type: afterResponse
+    code: pm.globals.get("accessToken");
+    language: text/javascript
+order: 16000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/IKCRM/object/contract/search?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "index":1,
+        "count":10,
+        "ids":["0h89iAv3CQvQ00"]
+    }
+order: 8000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://unity.ekuaibao.com/api/realms/auth
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "appKey":"sQxFwPipduIQCdYrpzWFhnrKKCiwmXtr",
+        "appSecret":"iAJtQdIjtiTCNegSaeqvqArgKHXSNjJj"
+    }
+order: 7000

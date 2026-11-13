@@ -1,0 +1,51 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/staffs?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\":\"赵六10\",  //员工姓名\t\r
+
+    \    \"userid\":\"88881010\",  //第三方平台的id，用于与三方平台关联\r
+
+    \    \"code\":\"1010\",  //工号\r
+
+    \    \"cellphone\":\"15588881010\",  //手机号\t\r
+
+    \    \"email\":\"15588881010@163.com\",  //邮箱\r
+
+    \    \"note\":\"备注\",  //备注\r
+
+    \    \"defaultDepartment\":\"Tdk3tgber501v0:ID_3tX0lX509$g\",  //默认部门，修改-财务部\r
+
+    \    \"departments\":[  //所在部门，兼职部门，请确保至少包含默认部门\r
+
+    \        \"Tdk3tgber501v0:ID_3tX0lX509$g\"  //修改-财务部\r
+
+    \    ],\r
+
+    \    \"useNewAccount\":false,  //是否强制启用新用户，激活员工账号操作\r
+
+    \    \"staffCustomForm\":{  //员工自定义字段\r
+
+    \        \"rankType\":\"ID_3tqvxwgjK6w\",  //职级，值为职级档案项id，一级        \r
+
+    \        \"postType\":\"ID_3tqvxwgjF6w\",  //岗位，值为岗位档案项id，经理\r
+
+    \        \"base\":\"[{\\\"key\\\":\\\"8\\\",\\\"label\\\":\\\"北京市/海淀区\\\"}]\",  //常住地\r
+
+    \        // \"defaultDepartment.form.costCenter\":\"f70dd69f860413c86800\",  //成本中心，修改-财务部\r
+
+    \        // \"defaultDepartment.form.legalEntity\":\"ID_3tqvxwgjI6w\",  //法人实体，分公司\r
+
+    \        \"u_花名\":\"法外狂徒\",  //花名\r
+
+    \        \"u_项目\":\"ID_3tqvxwgjD6w\"  //项目，米哈游项目\r
+
+    \    }\r
+
+    }"
+order: 8000

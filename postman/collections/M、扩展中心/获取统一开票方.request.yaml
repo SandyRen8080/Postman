@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/invoice/unify/corporation/list?accessToken={{accessToken}}"
+method: GET
+queryParams:
+  accessToken: "{{accessToken}}"
+order: 15000

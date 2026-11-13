@@ -1,0 +1,7 @@
+$kind: http-request
+name: 撤销/删除单据
+url: "{{URL}}/api/openapi/v2/flow/data/$PQIbuN0nmYc800/retract?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+order: 13000

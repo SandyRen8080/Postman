@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/departments/disableOrEnableDepartment/$Urf3lsFgBp00gw:ID_3nPwG8m03U0?accessToken={{accessToken}}&active=false"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+  active: "false"
+order: 7000

@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.1/datalink/editPlatform?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "\r
+
+    {\r
+
+    \    \"name\": \"\",\r
+
+    \    \"adminIds\": [\r
+
+    \        \"bwa3wajigF0WH0:IqQ3wlg6bv9QGg\",\r
+
+    \        \"bwa3wajigF0WH0:ID_3wlg6bv9UGg\"\r
+
+    \    ],\r
+
+    \    \"id\": \"ID_3zJqkMO1ly0\"\r
+
+    }"
+scripts:
+  - type: beforeRequest
+    code: pm.globals.get("accessToken")
+    language: text/javascript
+order: 3000

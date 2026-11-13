@@ -1,0 +1,239 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.2/flow/data?accessToken={{accessToken}}&isCommit=false&isUpdate=true"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+    disabled: true
+queryParams:
+  accessToken: "{{accessToken}}"
+  isCommit: "false"
+  isUpdate: "true"
+body:
+  type: json
+  content: "{\r
+
+    \  \"form\":{\r
+
+    \        \"outerCode\":\"xxx1\"       //外部系统单据编号\r
+
+    \        \"title\":\"测试日常报销单4\",//单据标题\r
+
+    \        \"details\":[              //费用明细\r
+
+    \            {\r
+
+    \                \"feeTypeId\":\"PCx3rwm3aA00qM:hotel\", //费用类型ID\r
+
+    \                \"feeTypeForm\":{ //费用信息\r
+
+    \                    \"amount\":{  //报销金额\r
+
+    \                        \"standard\":\"335\",\r
+
+    \                        \"standardUnit\":\"元\",\r
+
+    \                        \"standardScale\":2,\r
+
+    \                        \"standardSymbol\":\"¥\",\r
+
+    \                        \"standardNumCode\":\"156\",\r
+
+    \                        \"standardStrCode\":\"CNY\"\r
+
+    \                    },\r
+
+    \                    \"apportions\":[  //分摊明细具体信息\r
+
+    \                        {\r
+
+    \                            \"apportionForm\":{\r
+
+    \                                \"项目\":\"ID_3rw$2RXfelM\",    //项目\r
+
+    \                                \"apportionId\":\"ID_3tLTuqz9b6M\", //分摊明细ID\r
+
+    \                                \"apportionMoney\":{  //分摊金额\r
+
+    \                                    \"standard\":\"335\",\r
+
+    \                                    \"standardUnit\":\"元\",\r
+
+    \                                    \"standardScale\":2,\r
+
+    \                                    \"standardSymbol\":\"¥\",\r
+
+    \                                    \"standardNumCode\":\"156\",\r
+
+    \                                    \"standardStrCode\":\"CNY\"\r
+
+    \                                },\r
+
+    \                                \"apportionPercent\":\"100.00\",    //分摊百分比\r
+
+    \                                \"expenseDepartment\":\"PCx3rwm3aA00qM:ID_3rw$2RXc5lM\" //分摊部门\r
+
+    \                            },\r
+
+    \                            \"specificationId\":\"PCx3rwm3aA00qM:报销部门&项目分摊:0234d1a99e67306c72df937ba8d4f7abb60e2c20\"   //分摊方式ID\r
+
+    \                        }\r
+
+    \                    ],\r
+
+    \                    \"invoiceForm\":{ //发票附件\r
+
+    \                        \"type\":\"exist\", //已有发票\r
+
+    \                        \"attachments\":[     //如果没有附件,不传此字段(附件先通过“上传附件”接口上传数据)\r
+
+    \                            {\r
+
+    \                                \"key\":\"OffLine-1639378118926-931.jpg\",\r
+
+    \                                \"fileId\":\"ID_3tLTuqz8f6M\",\r
+
+    \                                \"fileName\":\"OffLine.jpg\"\r
+
+    \                            }\r
+
+    \                        ]\r
+
+    \                    },\r
+
+    \                    \"feeDatePeriod\":{   //自定义配置的日期范围字段\r
+
+    \                        \"end\":1639324800000,\r
+
+    \                        \"start\":1639324800000\r
+
+    \                    },\r
+
+    \                    \"consumptionReasons\":\"123\"  //消费事由\r
+
+    \                },\r
+
+    \                \"specificationId\":\"PCx3rwm3aA00qM:hotel:expense:f9c75771191e4003f850fd9bf07eedd977459cc2\"   //费用类型模板ID\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"payeeId\":\"ID_3s4PKc13U$g\", //收款账户ID\r
+
+    \        \"u_Z员工\":\"PCx3rwm3aA00qM:SUv3rzY$rz02t0\",  \r
+
+    \        \"u_Z城市\":\"[{\\\"key\\\":\\\"2123\\\",\\\"label\\\":\\\"广东省/广州市/广州市区\\\"}]\",\r
+
+    \        \"u_Z小数\":\"345.354\",\r
+
+    \        \"u_Z开关\":true,\r
+
+    \        \"u_Z整数\":\"3323\",\r
+
+    \        \"u_Z文本\":\"测试2\",\r
+
+    \        \"u_Z日期\":1639324800000,\r
+
+    \        \"u_Z档案\":\"ID_3tLfV301eDw\",\r
+
+    \        \"u_Z部门\":\"PCx3rwm3aA00qM\",\r
+
+    \        \"u_Z附件\":[\r
+
+    \            {\r
+
+    \                \"key\":\"s-search-1639378172493-850.png\",\r
+
+    \                \"fileId\":\"ID_3tLTuqz8w6M\",\r
+
+    \                \"fileName\":\"s-search.png\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"description\":\"123\",    //描述\r
+
+    \        \"expenseDate\":1639324800000,    //报销日期\r
+
+    \        \"expenseLink\":\"ID_3twRddlb0$w\", //关联申请单ID，如单据无需关联申请单，可不在 form 对象中添加该字段\r
+
+    \        \"submitterId\":\"PCx3rwm3aA00qM:VWf3rvZHCb0ghM\",  //提交人ID\r
+
+    \        \"specificationId\":\"ID_3rwlFm523WM:2f01211a2447e29378d078e1219a51899eff7d36\",    //单据模板ID\r
+
+    \        \"u_Z业务对象\":\"ID_3tLfV302QDw\",\r
+
+    \        \"u_Z枚举发票\":\"MotorInvoice\",\r
+
+    \        \"u_Z枚举火车\":\"SW\",\r
+
+    \        \"u_Z枚举航班\":\"BUSINESS\",\r
+
+    \        \"u_Z枚举轮船\":\"ER\",\r
+
+    \        \"u_Z档案多选\":[\r
+
+    \            \"ad0dbcd46cf6d0104c00\",\r
+
+    \            \"dc0dbcd46cf6d0184c00\",\r
+
+    \            \"dc0dbcd46cf6d01c4c00\"\r
+
+    \        ],\r
+
+    \        \"u_Z业务对象2\":[\r
+
+    \            {\r
+
+    \                \"dataLinkId\":null,\r
+
+    \                \"dataLinkForm\":{\r
+
+    \                    \"E_cb0dbe8855a794ff5800_code\":\"ZGY003\",\r
+
+    \                    \"E_cb0dbe8855a794ff5800_name\":\"ZGY自定义3\",\r
+
+    \                    \"E_cb0dbe8855a794ff5800_所在部门\":\"PCx3rwm3aA00qM\"\r
+
+    \                },\r
+
+    \                \"dataLinkTemplateId\":\"ID_3rW8lqul4Rw\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"expenseDepartment\":\"PCx3rwm3aA00qM\"   //报销部门\r
+
+    \    },\r
+
+    \     \"params\":{ //当需要添加核销借款时添加该参数\r
+
+    \        \"loanWrittenOff\":[ //表示报销单中的核销借款字段\r
+
+    \            {\r
+
+    \              \"loanInfoId\":\"ID_3sJUjsRJUrw\", //借款包id\r
+
+    \              \"title\":\"测试\", //借款单标题\r
+
+    \              \"repaymentDate\":1641724500000,// 还款日期\r
+
+    \              \"fromApply\":false,\r
+
+    \              \"flowId\":\"ID_3seTcgi0qrg\", //借款单 Id\r
+
+    \              \"hasImported\":false,\r
+
+    \              \"amount\":\"222\" //核销金额\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    }\r
+
+    }"
+order: 9000

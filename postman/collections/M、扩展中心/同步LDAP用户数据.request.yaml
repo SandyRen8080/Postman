@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/ldap/sync?accessToken={{accessToken}}"
+method: POST
+headers:
+  Content-Type: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "ldapUsers": [
+            {
+                "mail": "test@mail",
+                "name": "user",
+                "employeeNumber": "123434",
+                "mobile": "13260304463",
+                "login": "name"
+            }
+        ]
+    }
+order: 12000

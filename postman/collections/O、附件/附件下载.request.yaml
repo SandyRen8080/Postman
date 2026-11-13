@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/attachment/downloadurls?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "[\r
+
+    \    {\r
+
+    \        \"id\": \"ID_3mc23hU0Bdw\",\r
+
+    \        \"key\": \"openapie286dd51-7317-46c1-b1eb-849897432ecf-openapi交接文档.docx\",\r
+
+    \        \"expiration\": 10000\r
+
+    \    }\r
+
+    ]"
+order: 2000

@@ -1,0 +1,11 @@
+$kind: http-request
+name: 停用/启用收款账户
+url: "{{URL}}/api/openapi/v2/payeeInfos/$u0gbxl3vQw7k00/disableOrEnableAccount?accessToken={{accessToken}}&active=false"
+method: PUT
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+  active: "false"
+order: 6000

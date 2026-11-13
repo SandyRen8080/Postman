@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/attachment/upload?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: ""
+    - type: file
+      key: file
+      src:
+        - /D:/【工作】文档/费控产品研发部9月24日团建.docx
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/dimensions/getDimensionById?accessToken={{accessToken}}&id=Urf3lsFgBp00gw:desktopPC"
+method: GET
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  - key: accessToken
+    value: "{{accessToken}}"
+  - key: id
+    value: Urf3lsFgBp00gw:desktopPC
+    description: ID_3tWykP2hBO0
+order: 8000

@@ -1,0 +1,39 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/departments/batch/create?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"departmentList\":[\r
+
+    \        {\r
+
+    \            \"code\": \"BM1002\",  //部门编码\r
+
+    \            \"name\": \"事业11部\",  //部门名称\r
+
+    \            \"parentId\": \"000a3-RUmE0000\",  //上级部门ID，企业id同为根部门id\r
+
+    \            \"order\": 0\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"code\": \"BM1003\",  //部门编码\r
+
+    \            \"name\": \"事业12部\",  //部门名称\r
+
+    \            \"parentId\": \"000a3-RUmE0000\",  //上级部门ID，企业id同为根部门id\r
+
+    \            \"order\": 0\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 2000

@@ -1,0 +1,51 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/payeeInfos/$ID_3lvD_GqDKEg?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: " {\r
+
+    \    // \"staffId\":\"Urf3lsFgBp00gw:Msy3lYjbQ103KM\",\r
+
+    \    \"type\": \"PERSONAL\",\r
+
+    \    \"name\": \"招商银行-修改0208-1\",\r
+
+    \    \"cardNo\": \"43211234\",\r
+
+    \    \"province\": \"北京市\",\r
+
+    \    \"city\": \"北京市\",\r
+
+    \    \"bank\": \"招商银行\",\r
+
+    \    \"branch\": \"1\",\r
+
+    \    \"owner\":\"INDIVIDUAL\",\r
+
+    \    \"certificateType\": \"09\",\r
+
+    \    \"certificateNo\": \"100999\",\r
+
+    \    \"bankLinkNo\": \"102100020044\",\r
+
+    \    \"visibility\": {\r
+
+    \        \"fullVisible\": false,\r
+
+    \        \"staffs\": [],\r
+
+    \        \"roles\": [],\r
+
+    \        \"departments\": [],\r
+
+    \        \"departmentsIncludeChildren\": true\r
+
+    \    },\r
+
+    \    \"remark\": \"修改\"\r
+
+    }"
+order: 5000

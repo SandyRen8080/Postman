@@ -1,0 +1,333 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/datalink/createDataLinkEntity?accessToken={{accessToken}}"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"dataLinkEntityReq\":{  //业务对象数据\r
+
+    \        \"platformId\":\"ID_3spbfG604bw1\",  //所属扩展ID\r
+
+    \        \"name\":\"业务对象全部字段参数示例\",  //业务对象名称\r
+
+    \        \"scoped\":true,  //参与人权限，true：部分人员参与，false：全员参与\r
+
+    \        \"ownerDepts\":true,  //参与人是否默认为负责人的所在部门,true：是，false：否  scoped=true时，此参数有效\r
+
+    \        \"visibility\":{  //参与人白名单，scoped=true时，此参数有效\r
+
+    \            \"roles\":[  //角色白名单  \r
+
+    \                \"qXE8Mmqokk8U00\"  //角色id\r
+
+    \            ],\r
+
+    \            \"staffs\":[  //员工白名单 \r
+
+    \                \"djg8LshfUkfM00:ID_3kpneISgylw\"  //员工id\r
+
+    \            ],\r
+
+    \            \"departments\":[  //部门白名单\r
+
+    \                \"djg8LshfUkfM00:WggaWlxmRk9U00\"  //部门id\r
+
+    \            ],\r
+
+    \            \"fullVisible\":true,  //是否开启参与人白名单 true:开启 false:关闭\r
+
+    \            \"departmentsIncludeChildren\":true  //子部门是否可见\ttrue:可见 false:不可见\r
+
+    \        },\r
+
+    \        \"type\":\"DIMENSION\",  //业务对象类型   DIMENSION:基础档案，BILL:单据，ORDER:订单\r
+
+    \        \"disableStrategy\":\"LIMIT_COUNT\",  //停用方式  MANUAL_ADMIN:管理员停启用,LIMIT_COUNT:限制引用次数\r
+
+    \        \"maxUsageCount\":3,  //最大引用次数\t该参数不可省略，可传\"\"。仅当“限制引用次数”时有效\r
+
+    \        \"importMethod\":[  //导入方式\t`excel`:Excel,`api`:API,`ebot`:EBot,`flow`:单据写入,`directly`:直接写入\r
+
+    \            \"excel\",\r
+
+    \            \"api\",\r
+
+    \            \"ebot\",\r
+
+    \            \"flow\",\r
+
+    \            \"directly\"\r
+
+    \        ],\r
+
+    \        \"fields\":[  //业务对象字段配置信息\r
+
+    \            {\r
+
+    \                \"name\":\"name\",  //字段实际名称，系统字段-必须为name\r
+
+    \                \"label\":\"名称\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"text\",  //字段类型  文本\r
+
+    \                \"optional\":false //字段是否必填，系统字段-必填  false：必填，true：选填\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"name\":\"code\",  //字段实际名称，系统字段-必须为code\r
+
+    \                \"label\":\"编码\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"autoNumber\",  //字段类型  自动编号\r
+
+    \                \"optional\":false,  //字段是否必填，系统字段-必填  false：必填，true：选填\r
+
+    \                \"rule\":\"B{YY}{000000}\" //自动编号规则 显示效果：B21001234\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"文本\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"text\",  //字段类型  文本\r
+
+    \                \"optional\":false  //字段是否必填  false：必填，true：选填\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"自动编号\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"autoNumber\",  //字段类型  自动编号\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"rule\":\"自动编号-{YYYY}-{MM}-{00}\"  //自动编号规则 显示效果：自动编号-2021-1220-04\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"日期\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"date\",  //字段类型 日期\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"withTime\":false  //是否包含时间  false：不包含，true：包含\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"日期范围\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"dateRange\",  //字段类型 日期范围\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"withTime\":true  //是否包含时间  false：不包含，true：包含\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"数字\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"number\",  //字段类型 数字\r
+
+    \                \"optional\":true,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"scale\":0,  //小数位数\r
+
+    \                \"unit\":\"个\"  //单位\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"金额\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"money\",  //字段类型 金额\r
+
+    \                \"optional\":true  //字段是否必填  false：必填，true：选填\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"开关\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"switcher\",  //字段类型 开关\r
+
+    \                \"optional\":false  //字段是否必填  false：必填，true：选填\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"收款信息\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象 \r
+
+    \                \"optional\":true,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"pay.PayeeInfo\"  //业务对象取值范围  此为收款信息\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"业务对象\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象 \r
+
+    \                \"optional\":true,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"datalink.DataLinkEntity.f50d96e58839a2e8dc00\"  //业务对象取值范围  此为自定义的业务对象，格式：datalink.DataLinkEntity.业务对象ID\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"业务对象多选\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"list\",  //字段类型 多选\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"elemType\":{   //多选时的参数类型\r
+
+    \                    \"type\":\"ref\",  //字段类型，关联业务对象\r
+
+    \                    \"entity\":\"datalink.DataLinkEntity.ab0d7c7dd27e4ad42c00\"  //业务对象取值范围  此为自定义的业务对象，格式：datalink.DataLinkEntity.业务对象ID\r
+
+    \                }\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"自定义档案\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象 \r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"basedata.Dimension.岗位预置\"  //业务对象取值范围  此为自定义档案，系统预制的岗位档案\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"城市\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象 \r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"basedata.city\"  //业务对象取值范围  此为系统预制的城市数据\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"部门\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象 \r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"organization.Department\"  //业务对象取值范围  此为组织结构里面的部门信息\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"人员\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"ref\",  //字段类型 关联业务对象\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"entity\":\"organization.Staff\"  //业务对象取值范围  此为组织结构里面的员工信息\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"人员多选\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"list\",  //字段类型 多选\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"elemType\":{  //多选时的参数类型\r
+
+    \                    \"type\":\"ref\",  //字段类型，关联业务对象\r
+
+    \                    \"entity\":\"organization.Staff\"  //业务对象取值范围  此为组织结构里面的员工信息\r
+
+    \                }\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"自动计算\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"money\",  //字段类型 金额，此为自动计算的结果值类型\r
+
+    \                \"optional\":false,  //字段是否必填  false：必填，true：选填\r
+
+    \                \"formula\":true,  //是否是自动计算类型，`true`:是 `false`:否\r
+
+    \                \"defaultValue\":\"`$金额`.本位币 * `$数字`\"  //计算公式，值 = 金额字段 * 数字\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"label\":\"附件\",  //字段显示名称，不为空即可\r
+
+    \                \"type\":\"list\",  //字段类型 多选\r
+
+    \                \"elemType\":{  //多选时的参数类型\r
+
+    \                    \"type\":\"attachment\"  //字段类型，附件类型\r
+
+    \                },\r
+
+    \                \"optional\":true  //字段是否必填  false：必填，true：选填\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"fieldMapping\":{  //业务对象赋值规则\r
+
+    \            \"名称\":[  //业务对象字段\r
+
+    \                \"title\"  //单据字段  title：单据标题，u_文本2：自定义字段\r
+
+    \            ],\r
+
+    \            \"部门\":[  //业务对象字段\r
+
+    \                \"expenseDepartment\"  //单据字段\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+order: 4000

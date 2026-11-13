@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.1/recordLink/queryAllRecordLink?accessToken={{accessToken}}&type=id"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+body:
+  type: json
+  content: "{\r
+
+    \    // \"roleDefIds\":[\"ID_3gUPXqx3j6I\"],  //档案关系ID\r
+
+    \    // \"orderBy\":\"updateTime\",  //排序依据，更新时间倒序\r
+
+    \    \"start\": 0,\r
+
+    \    \"count\": 101\r
+
+    }"
+order: 2000

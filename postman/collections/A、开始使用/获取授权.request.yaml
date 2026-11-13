@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/auth/getAccessToken"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"appKey\": \"xxxx-xxxx-xxx-xxxxx\",\r
+
+    \    \"appSecurity\": \"xxxxx-xxxx-xxx-xxx\"\r
+
+    }\r
+
+    \r
+
+    \r\n"
+scripts:
+  - type: afterResponse
+    code: "var jsonData = JSON.parse(responseBody);\r
+
+      pm.globals.set(\"accessToken\", jsonData.value.accessToken);\r
+
+      pm.globals.set(\"refreshToken\", jsonData.value.refreshToken);"
+    language: text/javascript
+settings:
+  disabledSystemHeaders: []
+order: 2000

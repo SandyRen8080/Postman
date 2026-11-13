@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.1/recordLink/del/$qyMbXMvgBgaU00?accessToken={{accessToken}}&type=id"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+body:
+  type: text
+  content: |-
+    {
+          "sourceValues": [],
+          "purposeValues": [
+                "ltAbQUtfE03k00:NU8bdZALSsts00"
+          ]
+    }
+order: 5000

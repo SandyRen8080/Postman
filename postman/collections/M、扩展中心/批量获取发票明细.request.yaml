@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/extension/INVOICE/object/invoice/detailBatch?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"invoiceIds\": [\r
+
+    \        \"djg8LshfUkfM00:033002100311:23272058\",\r
+
+    \        \"djg8LshfUkfM00:044031900111:69872971\"\r
+
+    \    ]\r
+
+    }"
+order: 4000

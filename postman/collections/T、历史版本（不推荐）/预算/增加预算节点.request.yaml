@@ -1,0 +1,55 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2/budgets/$u6wbqiMW0Yqo00/node/$1597314178620/add?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "budgetNode":{                          //预算节点信息
+            "id":"1634112670003",               //节点ID
+            "code":"维度-2-1",                  //节点编码
+            "content":[                         //节点维度信息，以何种类型分解预算
+                {
+                    "dimensionType": "DEPART",  //部门类型
+                    "dimensionId": "expenseDepartment",
+                    "mustLeaf": true,
+                    "contentId": "Urf3lsFgBp00gw"
+                }
+            ],
+            "moneys":[      
+                {
+                    "nodeId":"1634112670003", 
+                    "periodTime":1,             //第1个预算周期金额
+                    "budgetMoney":"100"
+                },
+                {
+                    "nodeId":"1634112670003", 
+                    "periodTime":2,             //第2个预算周期金额
+                    "budgetMoney":"200"
+                },
+                {
+                    "nodeId":"1634112670003", 
+                    "periodTime":3,             //第3个预算周期金额
+                    "budgetMoney":"300"
+                },
+                {
+                    "nodeId":"1634112670003", 
+                    "periodTime":4,             //第4个预算周期金额
+                    "budgetMoney":"400"
+                }
+            ],
+            "control":"ALLOW"   
+        },
+        "visibility":{              
+            "staffIds":[
+                "Urf3lsFgBp00gw:AvT3lntT8zzpWw"
+            ], 
+            "roleDefIds":[] 
+        }
+    }
+order: 1000

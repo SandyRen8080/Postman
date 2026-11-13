@@ -1,0 +1,118 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/property/addPropertySet?accessToken={{accessToken}}"
+method: POST
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: text
+  content: |-
+    {
+        "properties":[
+            {
+                "label":"自定义扩展测试",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"datalink.DataLinkEntity.99280b7abde4c9c19800" //自定义扩展
+                }
+            },
+            {
+                "label":"档案项目",
+                "canAsDimension":true,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"basedata.Dimension.项目" //自定义档案
+                }
+            },
+            {
+                "label":"文本1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"text"  //文本
+                }
+            },
+            {
+                "label":"数字1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"number",//数字
+                    "unit":"kg",    //单位
+                    "scale": 3      //小数位数
+                }
+            },
+            {
+                "label":"金额1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"money" //金额
+                }
+            },
+            {
+                "label":"日期1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"date" //日期
+                }
+            },
+            {
+                "label":"日期范围1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"dateRange" //日期范围
+                }
+            },
+            {
+                "label":"开关1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"boolean" //开关
+                }
+            },
+            {
+                "label":"附件1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"list",
+                    "elemType":{
+                        "type":"attachment" //附件
+                    }
+                }
+            },
+            {
+                "label":"部门1",
+                "canAsDimension":true,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"organization.Department" //部门
+                }
+            },
+            {
+                "label":"员工1",
+                "canAsDimension":true,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"organization.Staff" //员工
+                }
+            },
+            {
+                "label":"城市1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"basedata.city" //城市
+                }
+            },
+            {
+                "label":"枚举1",
+                "canAsDimension":false,
+                "dataType":{
+                    "type":"ref",
+                    "entity":"basedata.Enum.CabinType" //枚举
+                }
+            }
+        ]
+    }
+order: 8000

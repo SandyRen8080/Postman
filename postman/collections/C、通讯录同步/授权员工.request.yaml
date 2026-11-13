@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/charge/powers/authStaff?accessToken={{accessToken}}"
+method: POST
+queryParams:
+  accessToken: "{{accessToken}}"
+body:
+  type: json
+  content: "{\r
+
+    \    \"type\":\"code\",  //员工标识类型,id:员工id code:工号 cellphone:手机号\r
+
+    \    \"delStaff\":[\"P1001\",\"P1002\"],  //解除激活的员工，P1001，P1002\r
+
+    \    \"addStaff\":[\"1001\"]  //激活的员工,1001:张三\r
+
+    }   "
+order: 15000

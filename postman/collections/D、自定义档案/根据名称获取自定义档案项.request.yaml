@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1/dimensions/getDimensionByName?accessToken={{accessToken}}&name=%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"
+method: GET
+headers:
+  content-type: application/json
+  Accept: application/json
+queryParams:
+  accessToken: "{{accessToken}}"
+  name: "%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE"
+order: 10000

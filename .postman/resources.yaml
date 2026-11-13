@@ -1,0 +1,34 @@
+# Use this workspace to collaborate
+workspace:
+  id: dd58e003-b018-4a1f-85bb-495d3c657c3f
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/A、开始使用: bf045bbc-d653-4ff7-bd94-1fe193b0cdea
+    ../postman/collections/I、委托授权: 6c0748de-d7ac-4ae8-b42d-48c70bab4812
+    ../postman/collections/E、档案关系: c675e4f6-5f50-4f18-b79a-912e85bd4216
+    ../postman/collections/G、单据模板: 8a14dfc0-529f-46bb-9278-a0fd604982d5
+    ../postman/collections/C、通讯录同步: bd8256f0-0e0b-454e-8db8-82c7ac12f18b
+    ../postman/collections/F、费用类型: bb31b999-7af5-4401-b73f-4db2fdcf5243
+    ../postman/collections/J、企业收付款账户: 25c06f98-dfe0-4065-afb4-1b1c8d9c264e
+    ../postman/collections/D、自定义档案: 02070042-f07e-4623-930c-ccf0af2bb6c7
+    ../postman/collections/N、出站消息: e5cfc288-587e-4856-b054-495cb5ae924f
+    ../postman/collections/L、自建应用: 774d0aff-e79c-4890-bc98-412bdf006b2c
+    ../postman/collections/K、预算: d852c3ac-b3a3-43de-977b-7d0b2e54dc71
+    ../postman/collections/B、企业通讯录: 28bb43d8-439b-4cbc-b3d2-bd28a98b1c9a
+    ../postman/collections/P、城市管理: 33e0dbda-11d0-45de-a21b-05009ba95b70
+    ../postman/collections/M、扩展中心: f8214fa0-b76a-4365-9cd0-aa11a6b4ffd8
+    ../postman/collections/Q、币种汇率: 4e9594d5-73c3-436d-a930-bd9ec08a5ee6
+    ../postman/collections/T、历史版本（不推荐）: d0198b75-6402-4d2d-b0cd-1d005bfcac5e
+    ../postman/collections/O、附件: 7d6dffb8-75b2-4ed9-af95-3c58c7c17351
+    ../postman/collections/S、工具接口: e4a4cc3c-05da-4449-98e1-9b6e942c0396
+    ../postman/collections/R、基础数据: a72b6f44-819f-4a3c-8a4b-f35d1485918f
+    ../postman/collections/H、单据: 788645cc-1aa6-4316-9bb6-6925af315c6e
+
+# All resources in the `postman/` folder are automatically registered in Local View.
+# Point to additional files outside the `postman/` folder to register them individually. Example:
+#localResources:
+#  collections:
+#    - ../tests/E2E Test Collection/

@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v1.1/dimensions/items/$ID_3qtonH1r4V0/disable?accessToken={{accessToken}}&type=id"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+  type: id
+order: 12000

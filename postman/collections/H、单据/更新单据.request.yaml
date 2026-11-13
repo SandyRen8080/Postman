@@ -1,0 +1,85 @@
+$kind: http-request
+url: "{{URL}}/api/openapi/v2.2/flow/data/$ID_3wLrJCPFFeg?accessToken={{accessToken}}&editorId=xxxxx&editFlag=increment"
+method: PUT
+queryParams:
+  accessToken: "{{accessToken}}"
+  editorId: xxxxx
+  editFlag: increment
+body:
+  type: json
+  content: "{\r
+
+    \    \"form\": {\r
+
+    \        \"title\": \"测试报销-修改\",\r
+
+    \        \"details\": [\r
+
+    \            {\r
+
+    \                \"feeTypeId\": \"ID_3sJ8R1y5ovw\",\r
+
+    \                \"feeTypeForm\": {\r
+
+    \                    \"amount\": {\r
+
+    \                        \"standard\": \"200\",\r
+
+    \                        \"standardUnit\": \"元\",\r
+
+    \                        \"standardScale\": 2,\r
+
+    \                        \"standardSymbol\": \"¥\",\r
+
+    \                        \"standardNumCode\": \"156\",\r
+
+    \                        \"standardStrCode\": \"CNY\"\r
+
+    \                    },\r
+
+    \                    \"feeDate\": 1642521600000,\r
+
+    \                    \"u_Open业\": \"ID_3v_rjyiV9sg\",\r
+
+    \                    \"attachments\": [],\r
+
+    \                    \"invoiceForm\": {\r
+
+    \                        \"type\": \"noWrite\"\r
+
+    \                    },\r
+
+    \                    \"u_业务名称\": \"导入1-name\",\r
+
+    \                    \"consumptionReasons\": \"\",\r
+
+    \                    \"u_业务成本中心\": \"ID_3s4zXwCPtM0\"\r
+
+    \                },\r
+
+    \                \"specificationId\": \"ID_3sJ8R1y5ovw:expense:716fb6408367ee1c026b727448f500ec937df7ac\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"payeeId\": \"ID_3uTr9EypnW0\",\r
+
+    \        \"submitDate\": 1642591655549,\r
+
+    \        \"description\": \"\",\r
+
+    \        \"expenseDate\": 1642521600000,\r
+
+    \        \"expenseLink\": \"ID_3uzt9_Sql5g\",\r
+
+    \        \"submitterId\": \"djg8LshfUkfM00:ID_3kpneISgylw\",\r
+
+    \        \"specificationId\": \"ID_3qYe8$OSZAM:63c2457b63e7b8601a38f1c8b9cccdebc0da3e99\",\r
+
+    \        \"expenseDepartment\": \"djg8LshfUkfM00\"\r
+
+    \    }\r
+
+    }"
+order: 10000
